@@ -2,6 +2,11 @@ html {
   height: 100vh;
 }
 
+:root {
+  --primary-color: ;
+  --primary-black: ;
+}
+
 body {
   margin: 0;
   height: 100vh;

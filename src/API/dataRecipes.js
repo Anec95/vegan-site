@@ -26,7 +26,7 @@ let urlSearch = "https://api.spoonacular.com/recipes/complexSearch?apiKey=06b02d
 export default async function searchRecipes(queryString) {
     let ingredientsArray = queryString.split(" ")
     let ingredients = ingredientsArray.join("+")
-    let completeURL = `${urlSearch}&query=${ingredients}&diet=vegan|vegetarian&number=100`
+    let completeURL = `${urlSearch}&query=${ingredients}&diet=vegan|vegetarian&addRecipeNutrition=true&number=100`
 
     try {
         let response = await fetch(completeURL);
