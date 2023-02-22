@@ -1,6 +1,7 @@
 import React, {useState} from "react"
-import {NavLink} from "react-router-dom"
+import {NavLink, Link, useLocation} from "react-router-dom"
 import Appetizer from "../secondary-page/Appetizer"
+
 
 export default function LeftSection() {
     const [elementOne, setElementOne] = useState(false)
@@ -47,7 +48,8 @@ export default function LeftSection() {
                 >
                     {elementOne === false && <p className='title contact-title'>A<br/>P<br/>P<br/>E<br/>T<br/>I<br/>Z<br/>E<br/>R</p>}
                     <NavLink
-                        to="ResultPool"
+                        to="/ResultPool"
+                        state={{element1: elementOne}}
                         className={elementOne ? 'menu-list appetizer-section show-img' : 'menu-list appetizer-section'}
                     >
                         <p className='title-inside-img'>Appetizer</p>
@@ -63,6 +65,8 @@ export default function LeftSection() {
                 >                        
                     {elementTwo === false && <p className='title practices-title'>M<br/>A<br/>I<br/>N<br/><br/>C<br/>O<br/>U<br/>R<br/>S<br/>E</p>}
                     <NavLink
+                        to="ResultPool"
+                        state={{element2: elementTwo}}
                         className={elementTwo ? 'menu-list main-course-section show-img' : 'menu-list main-course-section'}
                     >
                         <p className='title-inside-img'>Main Course</p>
@@ -78,6 +82,8 @@ export default function LeftSection() {
                 >
                     {elementThree === false &&<p className='title activities-title'>S<br/>I<br/>D<br/>E<br/><br/>D<br/>I<br/>S<br/>H</p>}
                     <NavLink
+                        to="ResultPool"
+                        state={{element3: elementThree}}
                         className={elementThree ? 'menu-list side-dish-section show-img' : 'menu-list side-dish-section'}
                     >
                         <p className='title-inside-img'>Side Dish</p>
@@ -93,6 +99,8 @@ export default function LeftSection() {
                 >
                     {elementFour === false && <p className='title courses-title'>D<br/>E<br/>S<br/>S<br/>E<br/>R<br/>T</p>}
                     <NavLink
+                        to="ResultPool"
+                        state={{element4: elementFour}}
                         className={elementFour ? 'menu-list dessert-section show-img' : 'menu-list dessert-section'}
                     >
                         <p className='title-inside-img'>Dessert</p>

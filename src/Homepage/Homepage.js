@@ -3,10 +3,8 @@ import './homepage.css'
 import LeftSection from "./left-section/LeftSection"
 import MiddleSection from "./middle-section/MiddleSection"
 import RightSection from "./right-section/RightSection"
-import ResultPool from "./result-pool/ResultPool"
 import searchRecipes from "../API/dataRecipes"
 import {NavLink, Navigate} from "react-router-dom"
-// import getRecipes from "../API/dataRecipes"
 
 
 export default function Homepage() {
@@ -22,19 +20,22 @@ export default function Homepage() {
     async function handleSubmit(event) {
         event.preventDefault()
         const result = await searchRecipes(ingredients)
-        // console.log(result)
-        setSearchResult(result)
+        setSearchResult(result) 
         setIngredients("")
         setSubmit(oldValue => true)
-        console.log(searchResult)
     }
+    console.log(searchResult)
 
     return (
         <main className='homepage-main'>
             <>
                 <LeftSection />
                 {submit && (
-                    <Navigate to="/ResultPool" replace={true} />
+                    <Navigate
+                        to="/ResultPool"
+                        state={{element5: true, result: searchResult}}
+                        replace={true}
+                    />
                 )}
                 <MiddleSection
                     handleSubmit={handleSubmit}

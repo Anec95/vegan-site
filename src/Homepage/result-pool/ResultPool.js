@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
+import {useLocation} from 'react-router-dom'
 import Header from '../header/Header'
-import Card from "./card/Card"
 import Appetizer from "../secondary-page/Appetizer"
 import MainCourse from "../secondary-page/MainCourse"
 import SideDish from "../secondary-page/SideDish"
@@ -8,7 +8,7 @@ import Dessert from "../secondary-page/Dessert"
 import SearchBoxResult from "../secondary-page/SearchBoxResult"
 import searchRecipes from "../../API/dataRecipes"
 
-export default function ResultPool() {
+export default function ResultPool(props) {
     const [appetizer, setAppetizer] = useState(false)
     const [mainCourse, setMainCourse] = useState(false)
     const [sideDish, setSideDish] = useState(false)
@@ -17,13 +17,39 @@ export default function ResultPool() {
     const [ingredients, setIngredients] = useState("")
     const [searchResult, setSearchResult] = useState("")
 
+    const location = useLocation()
+    // console.log(location)
+
+    useEffect(() => {
+        setAppetizer(oldValue => location.state.element1)
+    }, [])
+
+    useEffect(() => {
+        setMainCourse(oldValue => location.state.element2)
+    }, [])
+
+    useEffect(() => {
+        setSideDish(oldValue => location.state.element3)
+    }, [])
+
+    useEffect(() => {
+        setDessert(oldValue => location.state.element4)
+    }, [])
+
+    useEffect(() => {
+        setSubmit(oldValue => location.state.element5)
+    }, [])
+
+    useEffect(() => {
+        setSearchResult(oldValue => location.state.result)
+    }, [])
+
     function handleAppetizer() {
         setAppetizer(oldValue => true)
         setMainCourse(oldValue => false)
         setSideDish(oldValue => false)
         setSubmit(oldValue => false)
         setDessert(oldValue => false)
-        console.log(appetizer, mainCourse, sideDish, dessert)
     }
 
     function handleMainCourse() {
@@ -32,7 +58,6 @@ export default function ResultPool() {
         setSideDish(oldValue => false)
         setSubmit(oldValue => false)
         setDessert(oldValue => false)
-        console.log(appetizer, mainCourse, sideDish, dessert)
     }
 
     function handleSideDish() {
@@ -41,7 +66,6 @@ export default function ResultPool() {
         setSideDish(oldValue => true)
         setSubmit(oldValue => false)
         setDessert(oldValue => false)
-        console.log(appetizer, mainCourse, sideDish, dessert)
     }
 
     function handleDessert() {
@@ -50,7 +74,6 @@ export default function ResultPool() {
         setSideDish(oldValue => false)
         setDessert(oldValue => true)
         setSubmit(oldValue => false)
-        console.log(appetizer, mainCourse, sideDish, dessert)
     }
 
     function showSubmitResearch() {
@@ -59,7 +82,6 @@ export default function ResultPool() {
         setSideDish(oldValue => false)
         setDessert(oldValue => false)
         setSubmit(oldValue => true)
-        console.log(appetizer, mainCourse, sideDish, dessert)
     }
 
     function handleChange(event) {
@@ -71,7 +93,7 @@ export default function ResultPool() {
         event.preventDefault()
         const result = await searchRecipes(ingredients)
         console.log(result)
-        // setSearchResult(result)
+        setSearchResult(result)
         setIngredients("")
         showSubmitResearch()
     }
@@ -95,7 +117,7 @@ export default function ResultPool() {
             {mainCourse && <MainCourse />}
             {sideDish && <SideDish />}
             {dessert && <Dessert />}
-            {submit && <SearchBoxResult />}
+            {submit && <SearchBoxResult searchResult={searchResult}/>}
         </main>
     )
 }
