@@ -1,5 +1,6 @@
 import React from "react";
 import photo from "../../../../images/main-two.jpg"
+import CardCarosel from "./card-carosel/CardCarosel"
 
 export default function RecipesCarosel() {
     return (
