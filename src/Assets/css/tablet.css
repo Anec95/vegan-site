@@ -1,0 +1,220 @@
+@media only screen and (min-width: 501px) and (max-width: 1000px) {
+    .homepage-main {
+        width: 100vw;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+                                /* LEFT SECTION */
+
+    .left-section {
+        width: 100vw;
+        height: 400px;
+    }
+
+    .menu-element {
+        width: 60px;
+    }
+
+    .menu-container {
+        width: 50px;
+    }
+
+    .menu-showed {
+        width: 300px;
+    }
+
+    .menu-list-showed {
+        width: 290px;
+        transition: 1.5s;
+        cursor: pointer;
+    }
+
+    .menu-list {
+        width: 92%;
+        background-position-x: 0px;
+    }
+
+    .show-img {
+        display: block;
+    }
+
+
+                                /* MIDDLE SECTION */
+
+    .middle-section {
+        margin-top: 150px;
+        justify-content: flex-start;
+    }
+
+    form {
+        margin-left: 0px;
+    }
+
+
+                                /* HEADER SECTION */
+
+    .nav-link-container {
+        padding: 0 15px;
+    }
+
+    .header-link {
+        font-size: 14px;
+    }
+
+    .highlited {
+        font-size: 18px;
+    }
+
+    .text-area-header {
+        width: 150px;
+    }
+
+    .logo-header {
+        padding: 0 -20px;
+    }
+
+    
+
+
+                                /* RESULT SECTION */
+
+    .result-section {
+        padding: 8% 20%;
+    }
+
+
+                                /* CARD SECTION */
+
+    section h1 {
+        margin-bottom: 50px;
+        font-size: 40px;
+        color: rgba(143, 20, 83, 1);
+    }
+
+    .result-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .card {
+        width: 250px;
+        height: auto;
+        border: 3px solid rgba(82, 87, 93, 1);
+        border-radius: 9px;
+        margin: 15px auto;
+        background-color: rgba(242, 211, 136, 1);
+        text-decoration: none;
+        color: rgba(82, 87, 93, 1);
+    }
+
+    .card:hover {
+        cursor: pointer;
+    }
+
+    .card-img {
+        width: 100%;
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px;
+    }
+
+    .card h4 {
+        padding: 5px;
+    }
+
+    .general-info-grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 8px 5px;
+    }
+
+    .general-info-grid p {
+        font-size: 14px;
+    }
+
+    .euro-icon {
+        font-size: 12px;
+    }
+
+
+                                /* RECIPE INSTRUCTION */
+
+    .recipe-image {
+        width: 100%;
+        height: 300px;
+        margin-top: 15px;
+        object-fit: cover;
+    }
+
+    .recipe-title {
+        font-variant: small-caps;
+        font-size: 50px;
+        padding: 15px 15%;
+    }
+
+    .info-recipe-container {
+        padding: 30px 20%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cooking-info-container {
+        display: flex;
+    }
+
+    .ingredients,
+    .general-info {
+        padding: 30px;
+    }
+
+    .steps-container {
+        margin-bottom: 150px;
+    }
+
+
+                                /* RECIPE INSTRUCTION */
+
+    .carosel-navbar {
+        padding-bottom: 80px;
+    }
+
+    .carosel-container {
+        box-sizing: border-box;
+        width: 100%;
+        height: max-content;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        overflow-x: scroll;
+        background-color: rgba(152, 109, 142, 1);
+        border: 3px solid rgba(82, 87, 93, 1);
+        border-radius: 10px;
+    }
+
+    .carosel-card {
+        width: 300px;
+        margin-right: 15px;
+        background-color: rgba(242, 211, 136, 1);
+        border: 3px solid rgba(82, 87, 93, 1);
+        border-radius: 9px;
+    }
+
+    .carosel-card:hover {
+        cursor: pointer;
+    }
+
+    .carosel-img {
+        width: 300px;
+        object-fit: cover;
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px;
+    }
+
+    .carosel-title {
+        padding: 5px 10px;
+    }
+}

@@ -14,11 +14,11 @@ export async function searchRecipes(queryString) {
     let result = await response.json();
       
     if (response.status === 402) {
-        throw new Error("Richieste non disponibili torna domani")
+        throw new Error("Daily requests have ended, please come back tomorrow as soon as they are restored")
     }
-    if (!Array.isArray(result)) {
-        throw new Error ("risultato non valido")
-    } 
+    // if (!Array.isArray(result)) {
+    //     throw new Error ("risultato non valido")
+    // } 
     
     return result
 }
@@ -31,11 +31,11 @@ export async function searchAppetizer() {
     let result = await response.json();
 
     if (response.status === 402) {
-        throw new Error("Richieste non disponibili torna domani")
+        throw new Error("Daily requests have ended, please come back tomorrow as soon as they are restored")
     }
-    if (!Array.isArray(result)) {
-        throw new Error ("risultato non valido")
-    } 
+    // if (!Array.isArray(result)) {
+    //     throw new Error ("risultato non valido")
+    // } 
     
     return result
 }
@@ -49,11 +49,11 @@ export async function searchMainCourse() {
     let result = await response.json();
 
     if (response.status === 402) {
-        throw new Error("Richieste non disponibili torna domani")
+        throw new Error("Daily requests have ended, please come back tomorrow as soon as they are restored")
     }
-    if (!Array.isArray(result)) {
-        throw new Error ("risultato non valido")
-    } 
+    // if (!Array.isArray(result)) {
+    //     throw new Error ("risultato non valido")
+    // } 
     
     return result
 }
@@ -67,11 +67,11 @@ export async function searchSideDish() {
     let result = await response.json();
 
     if (response.status === 402) {
-        throw new Error("Richieste non disponibili torna domani")
+        throw new Error("Daily requests have ended, please come back tomorrow as soon as they are restored")
     }
-    if (!Array.isArray(result)) {
-        throw new Error ("risultato non valido")
-    } 
+    // if (!Array.isArray(result)) {
+    //     throw new Error ("risultato non valido")
+    // } 
     
     return result
 }
@@ -85,11 +85,51 @@ export async function searchDessert() {
     let result = await response.json();
 
     if (response.status === 402) {
-        throw new Error("Richieste non disponibili torna domani")
+        throw new Error("Daily requests have ended, please come back tomorrow as soon as they are restored")
     }
-    if (!Array.isArray(result)) {
-        throw new Error ("risultato non valido")
-    } 
+    // if (!Array.isArray(result)) {
+    //     throw new Error ("risultato non valido")
+    // } 
     
     return result
 }
+
+
+//istruzioni ricetta
+    export async function getInfoRecipe(idRecipe) {
+        let completeURL = `https://api.spoonacular.com/recipes/${idRecipe}/analyzedInstructions?apiKey=06b02d587fd44294a1575f43e96f2df2`
+        
+        let response = await fetch(completeURL);
+        let result = await response.json();
+
+        if (response.status === 402) {
+            throw new Error("Daily requests have ended, please come back tomorrow as soon as they are restored")
+        }
+
+        return result
+    }
+
+    export async function getImgIngredients(idRecipe) {
+        let ingredientsURL = `https://api.spoonacular.com/recipes/${idRecipe}/ingredientWidget?apiKey=06b02d587fd44294a1575f43e96f2df2`
+
+        let imgResponse = await fetch(ingredientsURL)
+        let imgResult = await imgResponse.json()
+
+        return imgResult
+    }
+
+
+//informazioni per carosello
+    export async function getSimilarRecipe(idRecipe) {
+        let completeURL = `https://api.spoonacular.com/recipes/${idRecipe}/similar?apiKey=06b02d587fd44294a1575f43e96f2df2`
+        
+        let response = await fetch(completeURL);
+        let result = await response.json();
+
+        if (response.status === 402) {
+            throw new Error("Daily requests have ended, please come back tomorrow as soon as they are restored")
+        }
+
+        return result
+    }
+    

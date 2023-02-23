@@ -3,7 +3,7 @@ import Error from "Pages/Error/Error"
 
 export default function MainCourse({mainCourseData}) {
     if (mainCourseData.length === 0) {
-        return <Error message="Torna domani" />
+        return <Error message="Daily requests have ended, please come back tomorrow as soon as they are restored" />
     }
 
     return (

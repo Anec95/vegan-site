@@ -7,8 +7,19 @@ export default function Card(props) {
     
     return (
         <NavLink
-            to="/Instruction"
-            state={{id:props.data.id}}
+            to="/recipe_instruction"
+            state={
+                {
+                    id:props.data.id,
+                    img:props.data.image,
+                    title:props.data.title,
+                    time:props.data.readyInMinutes,
+                    summury:props.data.summury,
+                    cost:props.data.cheap,
+                    types:props.data.dishTypes,
+                    cuisine:props.data.cuisines
+                }
+            }
             className='card'>
             <img className='card-img' src={props.data.image} />
             <h4>{props.data.title}</h4>

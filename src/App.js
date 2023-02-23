@@ -1,5 +1,7 @@
 import './App.css'
-import 'homepage.css'
+import 'Assets/css/style.css'
+import 'Assets/css/tablet.css'
+import 'Assets/css/smartphone.css'
 import { useState, useEffect } from 'react'
 import {BrowserRouter, Routes, Route, useNavigate} from "react-router-dom"
 import Layout from 'Pages/layout/Layout'
@@ -20,7 +22,7 @@ export default function App() {
     const [mainCourseData, setMainCourseData] = useState([])
     const [sideDishData, setSideDishData] = useState([])
     const [dessertData, setDessertData] = useState([])
-    const [searchResult, setSearchResult] = useState("")
+    const [searchResult, setSearchResult] = useState([])
     const [error, setError] = useState(null)
 
     const navigate = useNavigate()

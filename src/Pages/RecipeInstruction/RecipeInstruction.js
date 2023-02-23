@@ -1,42 +1,44 @@
 import React, {useState, useEffect} from "react";
 import { useLocation } from "react-router";
-import Header from "../../Components/header/Header"
+import { getInfoRecipe, getImgIngredients } from "API/dataRecipes";
 import BodyRecipe from "./Components/body-instruction/BodyRecipe";
 import RecipesCarosel from "./Components/Carosel/RecipesCarosel"
 
 export default function RecipeInstruction() {
-    // Fare una richiesta "Analyze Recipe o Get Recipe Information" e una "Analyzed recipe Instructions"
-    // Farne una terza "Get Similir Recipes" da mettere come footer con number impostato a max 10
+    const location = useLocation()
+    console.log(location.state.id)
+    const idRecipe = location.state.id
+    const [dataRecipe, setDataRecipe] = useState([])
+    const [imgIngredients, setImgIngredients] = useState("")
 
+    
+    
+    useEffect(() => {
+        async function receiveDataRecipe(idRecipe) {
+            const fetchDataRecipe = await getInfoRecipe(idRecipe)
+            setDataRecipe(fetchDataRecipe)
 
-    // const location = useLocation()
-    // console.log(location.state.id)
-    // const [infoRecipe, setInfoRecipe] = useState("")
-    // const [dataRecipe, setDataRecipe] = useState("")
-    
-    // async function getInfoRecipe() {
-    //     let completeURL = `https://api.spoonacular.com/recipes/${location.state.id}/analyze?apiKey=06b02d587fd44294a1575f43e96f2df2`
-    
-    //     try {
-    //         let response = await fetch(completeURL);
-    //         let data = await response.json();
-    //         setInfoRecipe(data)
-            
-    //     } catch (error) {
-    //         console.error(error);
-    //     }
-    // }
-    
-    // useEffect(() => {
-    //     getInfoRecipe()
-    // }, [])
+            const fetchDataImg = await getImgIngredients(idRecipe)
+            setImgIngredients(fetchDataImg)
+        }
+        receiveDataRecipe(idRecipe)
+    }, [])
 
-    // console.log(infoRecipe)
+    console.log(dataRecipe[0])
 
     return (
         <>
-            <Header />
-            <BodyRecipe />
+            <BodyRecipe
+                img={location.state.img}
+                steps={dataRecipe[0].steps}
+                title={location.state.title}
+                time={location.state.time}
+                summury={location.state.summury}
+                cost={location.state.cost}
+                types={location.state.types}
+                cuisine={location.state.cuisine}
+                imgIngredients={imgIngredients}
+            />
             <RecipesCarosel />
         </>
         

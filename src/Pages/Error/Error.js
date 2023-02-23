@@ -5,9 +5,13 @@ export default function Error({message}) {
     
     
     return (
-        <div>
-            <p>{message}</p>
-            <NavLink to="/">Homepage</NavLink>
+        <div className='error_main'>
+            <h1>{message}</h1>
+            <NavLink
+                to="/"
+            >
+                Back to Homepage
+            </NavLink>
         </div>
     )
 }
