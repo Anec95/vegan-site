@@ -6,7 +6,7 @@ import RecipesCarosel from "./Components/Carosel/RecipesCarosel"
 
 export default function RecipeInstruction() {
     const location = useLocation()
-    console.log(location.state.id)
+    console.log(location.state)
     const idRecipe = location.state.id
     const [dataRecipe, setDataRecipe] = useState([])
     const [imgIngredients, setImgIngredients] = useState("")
@@ -18,11 +18,15 @@ export default function RecipeInstruction() {
             const fetchDataRecipe = await getInfoRecipe(idRecipe)
             setDataRecipe(fetchDataRecipe)
 
-            const fetchDataImg = await getImgIngredients(idRecipe)
-            setImgIngredients(fetchDataImg)
+            // const fetchDataImg = await getImgIngredients(idRecipe)
+            // setImgIngredients(fetchDataImg)
         }
         receiveDataRecipe(idRecipe)
     }, [])
+
+    if (dataRecipe.length === 0) {
+        return <Error message="Daily requests have ended, please come back tomorrow as soon as they are restored" />
+    }
 
     console.log(dataRecipe[0])
 
@@ -33,9 +37,8 @@ export default function RecipeInstruction() {
                 steps={dataRecipe[0].steps}
                 title={location.state.title}
                 time={location.state.time}
-                summury={location.state.summury}
                 cost={location.state.cost}
-                types={location.state.types}
+                dishTypes={location.state.dishTypes}
                 cuisine={location.state.cuisine}
                 imgIngredients={imgIngredients}
             />

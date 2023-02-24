@@ -1,26 +1,25 @@
 import React from "react";
 
-export default function BodyRecipe({steps}, {img}, {title}, {time}, {summury}, {cost}, {types}, {cuisine}, {imgIngredients}) {
+export default function BodyRecipe(props) {
     return (
         <>
-            <img className="recipe-image" src={img} />
-            <h1 className="recipe-title">{title}</h1>
+            <img className="recipe-image" src={props.img} />
+            <h1 className="recipe-title">{props.title}</h1>
             <div className="info-recipe-container">
-                <p>{summury}</p> 
                 <div className="cooking-info-container">
                     <div className="general-info">
-                        <p><strong>Preparation time:</strong> {time} minutes</p>
-                        <p><strong>Dish type:</strong> {types.join(" | ")}</p>
-                        <p><strong>Cost:</strong> {cost}</p>
-                        <p><strong>Cuisine type:</strong> {cuisine.join(" | ")}</p>
+                        <p><strong>Preparation time:</strong> {props.time} minutes</p>
+                        <p><strong>Dish type:</strong> {props.dishTypes.join(" | ")}</p>
+                        <p><strong>Cost:</strong> {props.cost}</p>
+                        <p><strong>Cuisine type:</strong> {props.cuisine.join(" | ")}</p>
                     </div>  
                     <div className="ingredients">
-                        <img className="recipe-image" src={imgIngredients} />   
+                        {/* <img className="recipe-image" src={props.imgIngredients} />    */}
                     </div>                   
                 </div>
                 <div className="steps-container">
-                    {
-                        steps.map(data => {
+                    {props.steps &&
+                        (props.steps.map(data => {
                             return (
                                 <>
                                     <h2><strong>Step</strong> {data.number}</h2>
@@ -51,7 +50,7 @@ export default function BodyRecipe({steps}, {img}, {title}, {time}, {summury}, {
                                     }
                                 </>                                
                             )
-                        })
+                        }))
                     }
                     
                 </div>

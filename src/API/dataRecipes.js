@@ -8,7 +8,7 @@ let urlSearch = "https://api.spoonacular.com/recipes/complexSearch?apiKey=06b02d
 export async function searchRecipes(queryString) {
     let ingredientsArray = queryString.split(" ")
     let ingredients = ingredientsArray.join("+")
-    let completeURL = `${urlSearch}&query=${ingredients}&diet=vegan|vegetarian&addRecipeNutrition=true&number=30`
+    let completeURL = `${urlSearch}&query=${ingredients}&diet=vegan|vegetarian&addRecipeNutrition=true&number=1`
 
     let response = await fetch(completeURL);
     let result = await response.json();
@@ -25,7 +25,7 @@ export async function searchRecipes(queryString) {
 
 //ricerca per sezione appetizer
 export async function searchAppetizer() {
-    let completeURL = `${urlSearch}&type=appetizer&diet=vegan|vegetarian&addRecipeNutrition=true&number=21`
+    let completeURL = `${urlSearch}&type=appetizer&diet=vegan|vegetarian&addRecipeNutrition=true&number=1`
 
     let response = await fetch(completeURL);
     let result = await response.json();
@@ -43,7 +43,7 @@ export async function searchAppetizer() {
 
 //ricerca per sezione main course
 export async function searchMainCourse() {
-    let completeURL = `${urlSearch}&type=main+course&diet=vegan|vegetarian&addRecipeNutrition=true&number=21`
+    let completeURL = `${urlSearch}&type=main+course&diet=vegan|vegetarian&addRecipeNutrition=true&number=1`
 
     let response = await fetch(completeURL);
     let result = await response.json();
@@ -61,7 +61,7 @@ export async function searchMainCourse() {
 
 //ricerca per sezione side dish
 export async function searchSideDish() {
-    let completeURL = `${urlSearch}&type=side+dish&diet=vegan|vegetarian&addRecipeNutrition=true&number=21`
+    let completeURL = `${urlSearch}&type=side+dish&diet=vegan|vegetarian&addRecipeNutrition=true&number=1`
 
     let response = await fetch(completeURL);
     let result = await response.json();
@@ -79,7 +79,7 @@ export async function searchSideDish() {
 
 //ricerca per sezione dessert
 export async function searchDessert() {
-    let completeURL = `${urlSearch}&type=dessert&diet=vegan|vegetarian&addRecipeNutrition=true&number=21`
+    let completeURL = `${urlSearch}&type=dessert&diet=vegan|vegetarian&addRecipeNutrition=true&number=1`
 
     let response = await fetch(completeURL);
     let result = await response.json();

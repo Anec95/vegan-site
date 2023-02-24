@@ -14,9 +14,8 @@ export default function Card(props) {
                     img:props.data.image,
                     title:props.data.title,
                     time:props.data.readyInMinutes,
-                    summury:props.data.summury,
                     cost:props.data.cheap,
-                    types:props.data.dishTypes,
+                    dishTypes:props.data.dishTypes,
                     cuisine:props.data.cuisines
                 }
             }
