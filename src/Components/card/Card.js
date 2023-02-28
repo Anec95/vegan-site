@@ -20,7 +20,7 @@ export default function Card(props) {
                 }
             }
             className='card'>
-            <img className='card-img' src={props.data.image} />
+            <img className='card-img' alt='logo' src={props.data.image} />
             <h4>{props.data.title}</h4>
             <div className='general-info-grid'>
                 <p>Ready in {props.data.readyInMinutes} minutes</p>
