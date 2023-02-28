@@ -23,7 +23,7 @@ export default function RecipeInstruction() {
             console.log("aggiornato")
         }
         receiveDataRecipe(idRecipe)
-    }, [])
+    }, [idRecipe])
 
     if (dataRecipe.length === 0) {
         return <Error message="Daily requests have ended, please come back tomorrow as soon as they are restored" />
