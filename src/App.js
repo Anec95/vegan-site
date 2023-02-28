@@ -13,7 +13,7 @@ import MainCourse from 'Pages/MainCourse/MainCourse';
 import SideDish from 'Pages/SideDish/SideDish';
 import Dessert from 'Pages/Dessert/Dessert';
 import NotFound from 'Pages/NotFound/NotFound'
-import { searchAppetizer, searchMainCourse, searchSideDish, searchDessert, searchRecipes } from 'API/dataRecipes';
+import { searchMeal, searchRecipes } from 'API/dataRecipes';
 import SearchResult from 'Pages/SearchResult/SearchResult';
 
 
@@ -30,16 +30,16 @@ export default function App() {
     useEffect(() => {
         async function renderingDataApp() {
 
-                const fetchDataAppetizer = await searchAppetizer()
+                const fetchDataAppetizer = await searchMeal("appetizer")
                 setAppetizerData(fetchDataAppetizer.results)
 
-                const fetchDataMainCourse = await searchMainCourse()
+                const fetchDataMainCourse = await searchMeal("main+course")
                 setMainCourseData(fetchDataMainCourse.results)
 
-                const fetchDataSideDish = await searchSideDish()
+                const fetchDataSideDish = await searchMeal("side+dish")
                 setSideDishData(fetchDataSideDish.results)
 
-                const fetchDataDessert = await searchDessert()
+                const fetchDataDessert = await searchMeal("dessert")
                 setDessertData(fetchDataDessert.results)
                    
         }
