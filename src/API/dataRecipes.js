@@ -38,13 +38,13 @@ export async function searchMeal(typeOfMeal) {
     export async function getInfoRecipe(idRecipe) {
         let completeURL = `https://api.spoonacular.com/recipes/${idRecipe}/analyzedInstructions?apiKey=${API_KEY}`
         
-        let response = await axios.get(completeURL)
+        let {data, status} = await axios.get(completeURL)
 
-        if (response.status === 402) {
+        if (status === 402) {
             throw new Error("Daily requests have ended, please come back tomorrow as soon as they are restored")
         }
 
-        return result.data
+        return data
     }
 
     export async function getImgIngredients(idRecipe) {
