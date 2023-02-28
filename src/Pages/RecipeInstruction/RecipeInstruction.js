@@ -31,7 +31,7 @@ export default function RecipeInstruction() {
 
     return (
         <>
-            <img className="recipe-image" alt="recipe image" src={location.state.img} />
+            <img className="recipe-image" alt="recipe" src={location.state.img} />
             <h1 className="recipe-title">{location.state.title}</h1>
             <div className="info-recipe-container">
                 <div className="cooking-info-container">
@@ -42,7 +42,7 @@ export default function RecipeInstruction() {
                         <p><strong>Cuisine type:</strong> {location.state.cuisine.join(" | ")}</p>
                     </div>  
                     <div className="ingredients">
-                        <img className="ingredients-image" alt="recipe image" src={imgIngredients} />   
+                        <img className="ingredients-image" alt="recipe" src={imgIngredients} />   
                     </div>                   
                 </div>
                 <div className="steps-container">

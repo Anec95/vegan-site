@@ -3,7 +3,7 @@ import 'Assets/css/style.css'
 import 'Assets/css/tablet.css'
 import 'Assets/css/smartphone.css'
 import { useState, useEffect } from 'react'
-import {BrowserRouter, Routes, Route, useNavigate} from "react-router-dom"
+import { Routes, Route, useNavigate } from "react-router-dom"
 import Layout from 'Pages/layout/Layout'
 import Homepage from './Pages/homepage/Homepage'
 import RecipeInstruction from "./Pages/RecipeInstruction/RecipeInstruction"

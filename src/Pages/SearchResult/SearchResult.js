@@ -1,4 +1,3 @@
-import React, {useEffect, useState} from "react"
 import Card from "../../Components/card/Card"
 
 export default function SearchResult({searchResult}) {    

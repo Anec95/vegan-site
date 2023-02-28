@@ -1,6 +1,5 @@
-import React, {useState} from "react"
-import {NavLink, Link, useLocation} from "react-router-dom"
-import Appetizer from "../../../Appetizer/Appetizer"
+import { useState } from "react"
+import { NavLink } from "react-router-dom"
 
 
 export default function LeftSection() {

@@ -1,6 +1,3 @@
-import React from "react"
-import { Navigate } from "react-router"
-
 const API_KEY = process.env.REACT_APP_API_KEY
 
 let urlSearch = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}`
@@ -29,9 +26,9 @@ export async function searchAppetizer() {
     let response = await fetch(completeURL);
     let result = await response.json();
 
-    // if (response.status === 402) {
-    //     throw new Error("Daily requests have ended, please come back tomorrow as soon as they are restored")
-    // }
+    if (response.status === 402) {
+        throw new Error("Daily requests have ended, please come back tomorrow as soon as they are restored")
+    }
     
     console.log(response)
     
