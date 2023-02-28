@@ -29,22 +29,6 @@ export default function App() {
 
     useEffect(() => {
         async function renderingDataApp() {
-            // try {
-            //     const fetchDataAppetizer = await searchAppetizer()
-            //     setAppetizerData(fetchDataAppetizer.results)
-
-            //     const fetchDataMainCourse = await searchMainCourse()
-            //     setMainCourseData(fetchDataMainCourse.results)
-
-            //     const fetchDataSideDish = await searchSideDish()
-            //     setSideDishData(fetchDataSideDish.results)
-
-            //     const fetchDataDessert = await searchDessert()
-            //     setDessertData(fetchDataDessert.results)
-            // } catch (err) {
-            //     setError(err.message)
-            //     navigate("/error_page")
-            // }
 
                 const fetchDataAppetizer = await searchAppetizer()
                 setAppetizerData(fetchDataAppetizer.results)

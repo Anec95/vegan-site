@@ -14,23 +14,23 @@ export default function BodyRecipe(props) {
                         <p><strong>Cuisine type:</strong> {props.cuisine.join(" | ")}</p>
                     </div>  
                     <div className="ingredients">
-                        {/* <img className="recipe-image" src={props.imgIngredients} />    */}
+                        <img className="recipe-image" src={props.imgIngredients} />   
                     </div>                   
                 </div>
                 <div className="steps-container">
                     {props.steps &&
-                        (props.steps.map(data => {
+                        (props.steps.map((data, index) => {
                             return (
-                                <>
+                                <div key={index}>
                                     <h2><strong>Step</strong> {data.number}</h2>
                                     <p>{data.step}</p>
                                     {data.ingredients.length > 0 &&
                                         <ul>
                                             <h3>Ingredients required:</h3>
                                             {
-                                                data.ingredients.map(element => {
+                                                data.ingredients.map((element, index) => {
                                                     return (
-                                                        <li>{element.name}</li>
+                                                        <li key={index}>{element.name}</li>
                                                     )
                                                 })
                                             }
@@ -40,15 +40,15 @@ export default function BodyRecipe(props) {
                                         <ul>
                                             <h3>Equipment required:</h3>
                                             {
-                                                data.equipment.map(element => {
+                                                data.equipment.map((element, index) => {
                                                     return (
-                                                        <li>{element.name}</li>
+                                                        <li key={index}>{element.name}</li>
                                                     )
                                                 })
                                             }
                                         </ul>
                                     }
-                                </>                                
+                                </div>                                
                             )
                         }))
                     }

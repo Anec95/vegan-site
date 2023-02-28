@@ -1,7 +1,9 @@
 import React from "react"
 import { Navigate } from "react-router"
 
-let urlSearch = "https://api.spoonacular.com/recipes/complexSearch?apiKey=06b02d587fd44294a1575f43e96f2df2"
+const API_KEY = process.env.REACT_APP_API_KEY
+
+let urlSearch = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}`
 
 
 //ricerca generale da barra navigazione
@@ -16,9 +18,6 @@ export async function searchRecipes(queryString) {
     if (response.status === 402) {
         throw new Error("Daily requests have ended, please come back tomorrow as soon as they are restored")
     }
-    // if (!Array.isArray(result)) {
-    //     throw new Error ("risultato non valido")
-    // } 
     
     return result
 }
@@ -30,12 +29,11 @@ export async function searchAppetizer() {
     let response = await fetch(completeURL);
     let result = await response.json();
 
-    if (response.status === 402) {
-        throw new Error("Daily requests have ended, please come back tomorrow as soon as they are restored")
-    }
-    // if (!Array.isArray(result)) {
-    //     throw new Error ("risultato non valido")
-    // } 
+    // if (response.status === 402) {
+    //     throw new Error("Daily requests have ended, please come back tomorrow as soon as they are restored")
+    // }
+    
+    console.log(response)
     
     return result
 }
@@ -51,9 +49,6 @@ export async function searchMainCourse() {
     if (response.status === 402) {
         throw new Error("Daily requests have ended, please come back tomorrow as soon as they are restored")
     }
-    // if (!Array.isArray(result)) {
-    //     throw new Error ("risultato non valido")
-    // } 
     
     return result
 }
@@ -69,9 +64,6 @@ export async function searchSideDish() {
     if (response.status === 402) {
         throw new Error("Daily requests have ended, please come back tomorrow as soon as they are restored")
     }
-    // if (!Array.isArray(result)) {
-    //     throw new Error ("risultato non valido")
-    // } 
     
     return result
 }
@@ -87,9 +79,6 @@ export async function searchDessert() {
     if (response.status === 402) {
         throw new Error("Daily requests have ended, please come back tomorrow as soon as they are restored")
     }
-    // if (!Array.isArray(result)) {
-    //     throw new Error ("risultato non valido")
-    // } 
     
     return result
 }
@@ -97,7 +86,7 @@ export async function searchDessert() {
 
 //istruzioni ricetta
     export async function getInfoRecipe(idRecipe) {
-        let completeURL = `https://api.spoonacular.com/recipes/${idRecipe}/analyzedInstructions?apiKey=06b02d587fd44294a1575f43e96f2df2`
+        let completeURL = `https://api.spoonacular.com/recipes/${idRecipe}/analyzedInstructions?apiKey=${API_KEY}`
         
         let response = await fetch(completeURL);
         let result = await response.json();
@@ -110,26 +99,13 @@ export async function searchDessert() {
     }
 
     export async function getImgIngredients(idRecipe) {
-        let ingredientsURL = `https://api.spoonacular.com/recipes/${idRecipe}/ingredientWidget?apiKey=06b02d587fd44294a1575f43e96f2df2`
+        let ingredientsURL = `https://api.spoonacular.com/recipes/${idRecipe}/ingredientWidget.png?apiKey=${API_KEY}`
 
         let imgResponse = await fetch(ingredientsURL)
-        let imgResult = await imgResponse.json()
+        let imgResult = await imgResponse.blob()
 
-        return imgResult
-    }
+        const imgURl = URL.createObjectURL(imgResult)
 
-
-//informazioni per carosello
-    export async function getSimilarRecipe(idRecipe) {
-        let completeURL = `https://api.spoonacular.com/recipes/${idRecipe}/similar?apiKey=06b02d587fd44294a1575f43e96f2df2`
-        
-        let response = await fetch(completeURL);
-        let result = await response.json();
-
-        if (response.status === 402) {
-            throw new Error("Daily requests have ended, please come back tomorrow as soon as they are restored")
-        }
-
-        return result
+        return imgURl
     }
     
