@@ -122,14 +122,14 @@
     }
 
     .card h4 {
-        padding: 5px;
+        padding: 7px;
     }
 
     .general-info-grid {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 8px 5px;
+        padding: 10px;
     }
 
     .general-info-grid p {
