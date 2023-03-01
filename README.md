@@ -5,8 +5,7 @@
 
 In the middle we can find a search bar where we can enter keywords and start searches for all kinds of vegan recipes.
 
-
-<a href="https://vaaov-vegan-site.netlify.app/" target="_blank"><img src="./public/Assets/read-me_photo/homepage.png"></a>
+<a href="https://vaaov-vegan-site.netlify.app/" target="_blank"><img src="./public/read-me_photo/homepage.png"></a>
 
 On the left, however, we find a scrolling menu that is activated by hovering over it with the mouse cursor. This allows you to find suggestions for various meals for the day.
 
