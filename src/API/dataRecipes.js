@@ -9,7 +9,7 @@ let urlSearch = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_
 export async function searchRecipes(queryString) {
     let ingredientsArray = queryString.split(" ")
     let ingredients = ingredientsArray.join("+")
-    let completeURL = `${urlSearch}&query=${ingredients}&diet=vegan|vegetarian&addRecipeNutrition=true&number=1`
+    let completeURL = `${urlSearch}&query=${ingredients}&diet=vegan|vegetarian&addRecipeNutrition=true&number=18`
 
     let {data, status} = await axios.get(completeURL)
 
@@ -22,7 +22,7 @@ export async function searchRecipes(queryString) {
 
 //ricerca per sezioni pasti
 export async function searchMeal(typeOfMeal) {
-    let completeURL = `${urlSearch}&type=${typeOfMeal}&diet=vegan|vegetarian&addRecipeNutrition=true&number=1`
+    let completeURL = `${urlSearch}&type=${typeOfMeal}&diet=vegan|vegetarian&addRecipeNutrition=true&number=18`
 
     let {data, status} = await axios.get(completeURL)
 
