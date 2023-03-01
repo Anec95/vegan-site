@@ -30,13 +30,13 @@ Each Step will require different equipments and ingredients, which will be indic
 
 ## Built With
 
-<img src="./public/read-me_photo/logo192.png">  REACT
+<img src="./public/read-me_photo/logo192.png" width="20" height="20">  REACT
 
 ## Try it
 
 <div align="center">
   <a href="https://vaaov-vegan-site.netlify.app/">
-    <img src="./public/read-me_photo/ms-icon-144x144.png" alt="Logo" width="80" height="80">
+    <img src="./public/read-me_photo/ms-icon-144x144.png" alt="Logo" width="120" height="120">
   </a>
 
 <h3 align="center">VaaoV - VegetVegan way to coocking</h3>
