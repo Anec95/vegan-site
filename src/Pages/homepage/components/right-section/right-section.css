@@ -1,0 +1,10 @@
+.right-section {
+    width: 400px;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .right-section {
+        display: none;
+    }
+}

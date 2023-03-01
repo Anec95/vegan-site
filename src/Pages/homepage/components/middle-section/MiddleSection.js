@@ -1,4 +1,5 @@
 import logo from "Assets/images/logo-potato-removebg-preview.png"
+import "./middle-section.css"
 
 export default function MiddleSection(props) {
     return (

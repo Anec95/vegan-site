@@ -1,0 +1,189 @@
+.left-section {
+    width: 400px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.menu-element {
+    position: relative;
+    width: 30px;
+    height: 90%;
+}
+
+.menu-container {
+    width: 26px;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+}
+
+.menu-showed {
+    width: 304px;
+}
+
+.one:hover .contact-title,
+.two:hover .practices-title,
+.three:hover .activities-title,
+.four:hover .courses-title {
+    display: none;
+}
+
+.menu-list-showed {
+    width: 300px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.menu-list {
+    width: 90%;
+    margin-left: 10%;
+    height: 100%;
+    text-align: start;
+    display: none;
+
+    font-size: 24px;
+    color: white;
+    background-size: cover;
+    background-position-x: -150px;
+}
+
+.appetizer-section {
+    background-image: url(Assets/images/appetizer-two.jpg);
+}
+
+.main-course-section {
+    background-image: url(Assets/images/main-two.jpg);
+}
+
+.side-dish-section {
+    background-image: url(Assets/images/side-dish.jpg);
+}
+
+.dessert-section {
+    background-image: url(Assets/images/dessert.jpg);
+}
+
+.show-img {
+    display: block;
+}
+
+.contact-and-biography {
+    background-color: rgba(143, 20, 83, 1);
+    height: 100%;    
+}
+
+.one {
+   margin-top: 30px;
+}
+
+.practices {
+    background-color: rgba(233, 119, 119, 1);
+}
+
+.two {
+    margin-top: 60px;
+}
+
+.activities {
+    background-color: rgba(242, 211, 136, 1);
+}
+
+.three {
+    margin-top: 20px;
+}
+
+.courses {
+    background-color: rgba(144, 161, 125, 1);
+}
+
+.four {
+    margin-top: 35px; 
+}
+
+.title-inside-img {
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    font-variant: small-caps;
+    font-size: 30px;
+    color: #F3F8FF;
+}
+
+.title {
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 10px;
+    color: #FFFDF6;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .left-section {
+        width: 100vw;
+        height: 300px;
+    }
+
+    .menu-element {
+        width: 50px;
+    }
+
+    .menu-container {
+        width: 40px;
+    }
+
+    .menu-showed {
+        width: 240px;
+    }
+
+    .menu-list-showed {
+        width: 220px;
+        transition: 1.5s;
+        cursor: pointer;
+    }
+
+    .menu-list {
+        width: 92%;
+        background-position-x: 0px;
+    }
+
+    .show-img {
+        display: block;
+    }
+}
+
+
+@media only screen and (min-width: 501px) and (max-width: 1000px) {
+    .left-section {
+        width: 100vw;
+        height: 400px;
+    }
+
+    .menu-element {
+        width: 60px;
+    }
+
+    .menu-container {
+        width: 50px;
+    }
+
+    .menu-showed {
+        width: 300px;
+    }
+
+    .menu-list-showed {
+        width: 290px;
+        transition: 1.5s;
+        cursor: pointer;
+    }
+
+    .menu-list {
+        width: 92%;
+        background-position-x: 0px;
+    }
+
+    .show-img {
+        display: block;
+    }
+}

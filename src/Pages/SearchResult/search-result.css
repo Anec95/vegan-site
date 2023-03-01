@@ -1,0 +1,17 @@
+.result-section {
+    padding: 8% 20%;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .result-section {
+        padding: 8% 10%;
+    }
+}
+
+
+@media only screen and (min-width: 501px) and (max-width: 1000px) {
+    .result-section {
+        padding: 8% 20%;
+    }
+}

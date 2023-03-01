@@ -1,3 +1,5 @@
+import "./right-section.css"
+
 export default function RightSection() {
     return (
         <section className='right-section'>

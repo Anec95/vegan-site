@@ -1,6 +1,7 @@
 import logo from "Assets/images/logo-potato-removebg-preview.png"
 import Nav from "./Nav/Nav";
 import SearchBox from "./SearchBox/SearchBox";
+import "./header.css"
 
 
 export default function Header({handleSearch}) {

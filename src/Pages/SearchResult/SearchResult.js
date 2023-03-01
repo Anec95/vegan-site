@@ -1,4 +1,5 @@
 import Card from "../../Components/card/Card"
+import "./search-result.css"
 
 export default function SearchResult({searchResult}) {    
     return (

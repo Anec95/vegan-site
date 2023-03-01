@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import "./card.css"
 
 export default function Card(props) {
     const expensive = <><span className="euro-icon material-icons-outlined">euro</span><span className="euro-icon material-icons-outlined">euro</span><span className="euro-icon material-icons-outlined">euro</span></>

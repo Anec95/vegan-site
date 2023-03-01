@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import { useLocation } from "react-router";
 import { getInfoRecipe, getImgIngredients } from "API/dataRecipes"
 import Error from "Pages/Error/Error";
+import "./recipe-instruction.css"
 
 export default function RecipeInstruction() {
     const location = useLocation()

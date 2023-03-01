@@ -1,0 +1,37 @@
+.error_main {
+    width: 100vw;
+    height: calc(100vh - 90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error_main h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .error_main {
+        width: 100vw;
+        height: calc(100vh - 90px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .error_main h1 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
+
+
+@media only screen and (min-width: 501px) and (max-width: 1000px) {
+    .result-section {
+        padding: 8% 20%;
+    }
+}

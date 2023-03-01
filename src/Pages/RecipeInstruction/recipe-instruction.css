@@ -1,0 +1,175 @@
+.recipe-image {
+    width: 100%; 
+    height: 300px; 
+    margin-top: 15px;
+    object-fit: cover;
+}
+
+.recipe-title {
+    font-variant: small-caps;
+    font-size: 50px;
+    padding: 15px 15%;
+    color: rgba(52, 52, 52, 1);
+}
+
+.info-recipe-container {
+    padding: 30px 20%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    color: rgba(52, 52, 52, 1);
+}
+
+.cooking-info-container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.ingredients {
+    padding: 20px;
+}
+
+.general-info {
+    padding: 50px;
+}
+
+.general-info p {
+    padding: 5px;
+}
+
+.ingredients {
+    width: 500px;
+}
+
+.ingredients-image {
+    width: 100%;
+    border-radius: 9px;
+    box-shadow: 5px 5px 10px rgba(82, 87, 93, 0.5);
+    filter: brightness(75%);
+}
+
+.single-step {
+    margin-bottom: 30px;
+}
+
+.step-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.step-summary {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.steps-container {
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+.step-info {
+    display: flex;
+}
+
+.li-ingredient,
+.li-equipment {
+    margin-left: 30px;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .recipe-image {
+        height: 200px; 
+        margin-top: 8px;
+    }
+    
+    .recipe-title {
+        font-size: 25px;
+        padding: 15px 8%;
+    }
+    
+    .info-recipe-container {
+        padding: 15px 9%;
+        width: 82%;
+    }
+    
+    .cooking-info-container {
+        flex-direction: column;
+    }
+    
+    .ingredients {
+        padding: 10px;
+    }
+    
+    .general-info {
+        padding: 30px;
+    }
+    
+    .ingredients {
+        width: 280px;
+    }
+    
+    .single-step {
+        margin-bottom: 20px;
+    }
+    
+    .step-summary {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .step-info {
+        margin-left: -30px;
+    }
+    
+    .steps-container {
+        margin-top: 40px;
+        margin-bottom: 80px;
+    }
+    
+    .li-ingredient,
+    .li-equipment {
+        margin-left: 30px;
+        font-size: 12px;
+    }
+
+    .step-ingredients,
+    .step-equipment {
+        font-size: 14px;
+    }
+}
+
+
+@media only screen and (min-width: 501px) and (max-width: 1000px) {
+    .recipe-image {
+        width: 100%;
+        height: 300px;
+        margin-top: 15px;
+        object-fit: cover;
+    }
+
+    .recipe-title {
+        font-variant: small-caps;
+        font-size: 50px;
+        padding: 15px 15%;
+    }
+
+    .info-recipe-container {
+        padding: 30px 20%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cooking-info-container {
+        display: flex;
+    }
+
+    .ingredients,
+    .general-info {
+        padding: 30px;
+    }
+
+    .steps-container {
+        margin-bottom: 150px;
+    }
+}
