@@ -44,24 +44,22 @@
     animation-name: out;
     animation-duration: 1.8s;
     animation-delay: 0.2s;
- }
- .menu-list-showed {
+}
+
+.menu-list-showed {
     animation-name: in;
     animation-duration: 1.8s;
- }
+}
 
- @keyframes in {
+@keyframes in {
     from {width: 40px}
     to {width: 300px}
- }
+}
  
- @keyframes out {
+@keyframes out {
     from {width: 80px}
     to {width: 40px}
- }
-
-
-
+}
 
 .menu-list {
     width: 90%;
@@ -181,6 +179,16 @@
     .show-img {
         display: block;
     }
+
+    @keyframes in {
+        from {width: 40px}
+        to {width: 240px}
+    }
+     
+    @keyframes out {
+        from {width: 60px}
+        to {width: 40px}
+    }
 }
 
 
@@ -215,5 +223,15 @@
 
     .show-img {
         display: block;
+    }
+
+    @keyframes in {
+        from {width: 40px}
+        to {width: 290px}
+    }
+     
+    @keyframes out {
+        from {width: 70px}
+        to {width: 40px}
     }
 }
