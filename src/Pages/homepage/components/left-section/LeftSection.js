@@ -4,64 +4,23 @@ import "./left-section.css"
 
 
 export default function LeftSection() {
-    const [elementOne, setElementOne] = useState(false)
-    const [elementTwo, setElementTwo] = useState(false)
-    const [elementThree, setElemenThree] = useState(false)
-    const [elementFour, setElementFour] = useState(false)
     const verticalTitleAppetizer = <p className='title contact-title'>A<br/>P<br/>P<br/>E<br/>T<br/>I<br/>Z<br/>E<br/>R</p>
     const verticalTitleMainCourse = <p className='title practices-title'>M<br/>A<br/>I<br/>N<br/><br/>C<br/>O<br/>U<br/>R<br/>S<br/>E</p>
     const verticalTitleSideDish = <p className='title activities-title'>S<br/>I<br/>D<br/>E<br/><br/>D<br/>I<br/>S<br/>H</p>
     const verticalTitleDessert = <p className='title courses-title'>D<br/>E<br/>S<br/>S<br/>E<br/>R<br/>T</p>
+    const [element, setElement] = useState([false, false, false, false])
 
-    function handleFirstElement() {
-        setElementOne(oldValue => true)
-        setElementTwo(oldValue => false)
-        setElemenThree(oldValue => false)
-        setElementFour(oldValue => false)
-    }
-
-    function handleSecondElement() {
-        setElementTwo(oldValue => true)
-        setElementOne(oldValue => false)
-        setElemenThree(oldValue => false)
-        setElementFour(oldValue => false)
-    }
-
-    function handleThirdElement() {
-        setElementOne(oldValue => false)
-        setElementTwo(oldValue => false)
-        setElemenThree(oldValue => true)
-        setElementFour(oldValue => false)
-    }
-
-    function handleFourthElement() {
-        setElementTwo(oldValue => false)
-        setElementOne(oldValue => false)
-        setElemenThree(oldValue => false)
-        setElementFour(oldValue => true)
-    }
-
-    // const [menu, setMenu] = useState([false, false, false, false])
-
-    // function handleChange(event) {
-    //     const {name, value} = event.target
-    //     setMenu(prevState => {
-    //         return {
-    //             ...prevState,
-    //             [name]: value
-    //         }
-    //     })
-    // }
-
-    // console.log(menu)    
+    function handleElement(elementIndex) {
+        const newArray = [false, false, false, false]
+        newArray[elementIndex] = true
+        setElement(newArray)
+    }    
     
     return (
         <section className='left-section'>
             <MenuCard
-            // name={"elementOne"}
-            // value={menu.elementOne}
-                handleFunction={handleFirstElement}
-                element={elementOne}
+                handleFunction={() => {handleElement(0)}}
+                element={element[0]}
                 color={"appetizer-color "}
                 link={"/appetizer"}
                 number={"one"}
@@ -70,10 +29,8 @@ export default function LeftSection() {
                 name_menu={"Appetizer"}
             />
             <MenuCard
-            // name={"elementTwo"}
-            // value={menu.elementTwo}
-                handleFunction={handleSecondElement}
-                element={elementTwo}
+                handleFunction={() => {handleElement(1)}}
+                element={element[1]}
                 color={"main-course-color"}
                 link={"/main_course"}
                 number={"two"}
@@ -82,10 +39,8 @@ export default function LeftSection() {
                 name_menu={"Main Course"}
             />
             <MenuCard
-            // name={"elementThree"}
-            // value={menu.elementThree}
-                handleFunction={handleThirdElement}
-                element={elementThree}
+                handleFunction={() => {handleElement(2)}}
+                element={element[2]}
                 color={"side-dish-color"}
                 link={"/side_dish"}
                 number={"three"}
@@ -94,10 +49,8 @@ export default function LeftSection() {
                 name_menu={"Side Dish"}
             />
             <MenuCard
-            // name={"elementFour"}
-            // value={menu.elementFour}
-                handleFunction={handleFourthElement}
-                element={elementFour}
+                handleFunction={() => {handleElement(3)}}
+                element={element[3]}
                 color={"dessert-color"}
                 link={"/dessert"}
                 number={"four"}

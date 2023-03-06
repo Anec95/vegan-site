@@ -27,22 +27,26 @@
 
 .ingredients {
     padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .general-info {
     padding: 50px;
 }
 
+.photo-general-info {
+    border-radius: 9px;
+    box-shadow: 5px 5px 10px rgba(82, 87, 93, 0.5);
+}
+
 .general-info p {
     padding: 5px;
 }
 
-.ingredients {
-    width: 500px;
-}
-
 .ingredients-image {
-    width: 100%;
+    width: 500px;
     border-radius: 9px;
     box-shadow: 5px 5px 10px rgba(82, 87, 93, 0.5);
     filter: brightness(75%);
@@ -94,11 +98,12 @@
     }
     
     .cooking-info-container {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     
-    .ingredients {
+    .ingredients-image {
         padding: 10px;
+        width: 280px;
     }
     
     .general-info {
@@ -167,6 +172,10 @@
     .ingredients,
     .general-info {
         padding: 30px;
+    }
+
+    .ingredients-image {
+        width: 450px;
     }
 
     .steps-container {

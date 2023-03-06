@@ -1,5 +1,6 @@
 section h1 {
     margin-bottom: 50px;
+    color: #524439;
     font-size: 40px;
     color: rgba(143, 20, 83, 1);
 }
@@ -14,16 +15,19 @@ section h1 {
 .card {
     width: 250px;
     height: auto;
-    border: 3px solid rgba(82, 87, 93, 1);
+    border-top: 2px solid #CAB3A1;
     border-radius: 9px;
     margin: 15px auto;
-    background-color: rgba(242, 211, 136, 1);
     text-decoration: none;
-    color: rgba(82, 87, 93, 1);
+    color: #524439;
+    cursor: pointer;
+    box-shadow: 10px 10px 15px #978271;
+    backdrop-filter: blur(4px) saturate(150%);
 }
 
 .card:hover {
-    cursor: pointer;
+    transition: 1s;
+    filter: brightness(125%);
 }
 
 .card-img {
@@ -64,17 +68,6 @@ section h1 {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
-    }
-
-    .card {
-        width: 250px;
-        height: auto;
-        border: 3px solid rgba(82, 87, 93, 1);
-        border-radius: 9px;
-        margin: 15px auto;
-        background-color: rgba(242, 211, 136, 1);
-        text-decoration: none;
-        color: rgba(82, 87, 93, 1);
     }
 
     .card:hover {

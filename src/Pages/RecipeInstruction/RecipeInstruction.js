@@ -1,8 +1,9 @@
-import React, {useState, useEffect} from "react";
-import { useLocation } from "react-router";
+import React, {useState, useEffect} from "react"
+import { useLocation } from "react-router"
 import { getInfoRecipe, getImgIngredients } from "API/dataRecipes"
-import Error from "Pages/Error/Error";
+import Error from "Pages/Error/Error"
 import "./recipe-instruction.css"
+import headerPhoto from "Assets/images/header-instruction.jpg"
 
 export default function RecipeInstruction() {
     const location = useLocation()
@@ -30,7 +31,7 @@ export default function RecipeInstruction() {
 
     return (
         <>
-            <img className="recipe-image" alt="recipe" src={location.state.img} />
+            <img className="recipe-image" alt="recipe" src={headerPhoto} />
             <h1 className="recipe-title">{location.state.title}</h1>
             <div className="info-recipe-container">
                 <div className="cooking-info-container">
@@ -40,10 +41,13 @@ export default function RecipeInstruction() {
                         <p><strong>Cost:</strong> {location.state.cost ? expensive : cheap}</p>
                         <p><strong>Cuisine type:</strong> {location.state.cuisine.join(" | ")}</p>
                     </div>  
-                    <div className="ingredients">
-                        <img className="ingredients-image" alt="recipe" src={imgIngredients} />   
-                    </div>                   
+                    <div>
+                        <img className="photo-general-info" src={location.state.img} alt="header" />
+                    </div>              
                 </div>
+                <div className="ingredients">
+                    <img className="ingredients-image" alt="recipe" src={imgIngredients} />   
+                </div> 
                 <div className="steps-container">
                     {dataRecipe[0].steps &&
                         (dataRecipe[0].steps.map((data, index) => {
