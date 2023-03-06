@@ -182,7 +182,7 @@
 
     @keyframes in {
         from {width: 40px}
-        to {width: 240px}
+        to {width: 220px}
     }
      
     @keyframes out {
