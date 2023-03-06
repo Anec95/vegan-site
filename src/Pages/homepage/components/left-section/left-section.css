@@ -186,7 +186,7 @@
     }
      
     @keyframes out {
-        from {width: 60px}
+        from {width: 100px}
         to {width: 40px}
     }
 }
@@ -231,7 +231,7 @@
     }
      
     @keyframes out {
-        from {width: 70px}
+        from {width: 100px}
         to {width: 40px}
     }
 }
