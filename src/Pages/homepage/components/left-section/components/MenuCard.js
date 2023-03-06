@@ -11,7 +11,7 @@ export default function MenuCard(props) {
             className={props.element ? `menu-showed menu-element ${props.number}` : `menu-element ${props.number}`}
         >
             <div
-                className={props.element ? `${props.color} menu-container menu-list-showed` : `${props.color} menu-container`}
+                className={props.element ? `${props.color} menu-container menu-list-showed` : `${props.color} menu-container menu-out`}
             >
                 {props.element === false && props.vertical_name}
                 <NavLink
@@ -22,5 +22,5 @@ export default function MenuCard(props) {
                 </NavLink>
             </div>
         </div>
-)
+    )
 }

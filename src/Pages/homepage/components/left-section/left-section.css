@@ -1,28 +1,29 @@
 .left-section {
-    width: 400px;
+    width: 600px;
     display: flex;
     justify-content: flex-start;
 }
 
 .menu-element {
     position: relative;
-    width: 30px;
+    width: 50px;
     height: 90%;
-    transition: 2s;
+    transition: 1.5s;
 }
 
 .menu-container {
-    width: 26px;
+    width: 40px;
     height: 100%;
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    position: relative;
+    position: absolute;
     box-shadow: 10px 10px 15px #978271;
 }
 
 .menu-showed {
     width: 304px;
+    z-index: 1;
 }
 
 .one:hover .contact-title,
@@ -33,12 +34,34 @@
 }
 
 .menu-list-showed {
-    width: 300px;
     transition: 2s;
     cursor: pointer;
     box-shadow: 10px 10px 15px #978271;
-
+    width: 300px;
 }
+
+.menu-out {
+    animation-name: out;
+    animation-duration: 1.8s;
+    animation-delay: 0.2s;
+ }
+ .menu-list-showed {
+    animation-name: in;
+    animation-duration: 1.8s;
+ }
+
+ @keyframes in {
+    from {width: 40px}
+    to {width: 300px}
+ }
+ 
+ @keyframes out {
+    from {width: 80px}
+    to {width: 40px}
+ }
+
+
+
 
 .menu-list {
     width: 90%;
