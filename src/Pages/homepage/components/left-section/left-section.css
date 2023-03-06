@@ -180,6 +180,10 @@
         display: block;
     }
 
+    .title-inside-img {
+        font-size: 24px;
+    }
+
     @keyframes in {
         from {width: 40px}
         to {width: 220px}
