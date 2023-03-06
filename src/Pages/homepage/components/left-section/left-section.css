@@ -8,6 +8,7 @@
     position: relative;
     width: 30px;
     height: 90%;
+    transition: 2s;
 }
 
 .menu-container {
@@ -17,6 +18,7 @@
     align-items: flex-end;
     justify-content: center;
     position: relative;
+    box-shadow: 10px 10px 15px #978271;
 }
 
 .menu-showed {
@@ -32,8 +34,10 @@
 
 .menu-list-showed {
     width: 300px;
-    transition: 1s;
+    transition: 2s;
     cursor: pointer;
+    box-shadow: 10px 10px 15px #978271;
+
 }
 
 .menu-list {
@@ -47,6 +51,7 @@
     color: white;
     background-size: cover;
     background-position-x: -150px;
+    border-right: 3px solid #2F4858;
 }
 
 .appetizer-section {
@@ -69,7 +74,7 @@
     display: block;
 }
 
-.contact-and-biography {
+.appetizer-color {
     background-color: rgba(143, 20, 83, 1);
     height: 100%;    
 }
@@ -78,7 +83,7 @@
    margin-top: 30px;
 }
 
-.practices {
+.main-course-color {
     background-color: rgba(233, 119, 119, 1);
 }
 
@@ -86,7 +91,7 @@
     margin-top: 60px;
 }
 
-.activities {
+.side-dish-color {
     background-color: rgba(242, 211, 136, 1);
 }
 
@@ -94,7 +99,7 @@
     margin-top: 20px;
 }
 
-.courses {
+.dessert-color {
     background-color: rgba(144, 161, 125, 1);
 }
 
@@ -104,11 +109,13 @@
 
 .title-inside-img {
     position: absolute;
+    width: max-content;
     bottom: 20px;
     left: 50px;
     font-variant: small-caps;
     font-size: 30px;
     color: #F3F8FF;
+    animation-duration: 2s
 }
 
 .title {

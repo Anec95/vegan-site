@@ -6,7 +6,6 @@ import "./recipe-instruction.css"
 
 export default function RecipeInstruction() {
     const location = useLocation()
-    console.log(location)
     const idRecipe = location.state.id
     const [dataRecipe, setDataRecipe] = useState([])
     const [imgIngredients, setImgIngredients] = useState("")
@@ -21,7 +20,6 @@ export default function RecipeInstruction() {
 
             const fetchDataImg = await getImgIngredients(idRecipe)
             setImgIngredients(fetchDataImg)
-            console.log("aggiornato")
         }
         receiveDataRecipe(idRecipe)
     }, [idRecipe])

@@ -8,7 +8,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    box-shadow: 0 2px rgba(32, 45, 45,0.5);
+    box-shadow: 5px 5px 10px #CAB3A1;
 }
 
 .nav-link-container {
@@ -21,6 +21,12 @@
 .home-icon {
     text-decoration: none;
     color: black;
+}
+
+.home-icon:hover,
+.header-link:hover{
+    text-shadow: 2.5px 2.5px 1px #978271;
+    cursor: pointer;
 }
 
 .header-link {
@@ -41,10 +47,6 @@
     width: max-content;
     margin-left: 15px;
     text-decoration: underline;
-}
-
-.header-link:hover {
-    cursor: pointer;
 }
 
 .searchbar-header-container {

@@ -5,7 +5,6 @@ export default function SearchBox({handleSearch}) {
 
     function handleChange(event) {
         setIngredients(event.target.value)
-        console.log(ingredients)
     }
 
     function handleSubmit(event) {

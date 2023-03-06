@@ -1,26 +1,29 @@
-import Card from "../../Components/card/Card"
 import Error from "Pages/Error/Error"
+import Schedule from "Components/Schedule/Schedule"
+import { useState, useEffect } from "react"
+import { searchMeal } from "API/dataRecipes"
 
-export default function Appetizer({appetizerData}) {
+export default function Appetizer() {
+    const [appetizerData, setAppetizerData] = useState([])
+
+    useEffect(() => {
+        async function renderingDataApp() {
+            const fetchDataAppetizer = await searchMeal("appetizer")
+            setAppetizerData(fetchDataAppetizer.results)   
+        }
+        renderingDataApp() 
+    }, [])
+
     if (appetizerData.length === 0) {
         return <Error message="Daily requests have ended, please come back tomorrow as soon as they are restored" />
     }
 
     return (
-        <section className='result-section'>
-            <h1>Appetizer</h1>
-            <div className="result-container">
-                {
-                    appetizerData.map(data => {
-                        return (
-                            <Card
-                                key={data.id}
-                                data={data}
-                            />
-                        )
-                    })
-                }
-            </div>            
-        </section>       
+        <>
+            <Schedule
+                name={"Appetizer"}
+                recipeData={appetizerData}
+            />
+        </>      
     )
 }

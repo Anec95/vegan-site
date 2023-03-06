@@ -36,8 +36,9 @@ form {
 }
 
 .research-box {
-    background-color: rgba(152, 109, 142, 1);
-    border: 2px solid rgba(82, 87, 93, 1);  
+    background-color: #FFE7D4;
+    border: 2px solid #2F4858;
+    box-shadow: inset 4px 4px 15px 0px #CAB3A1;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     font-size: 30px;
@@ -50,8 +51,10 @@ form {
     height: 46px;
     padding-right: 10px;
     border: 2px solid rgba(82, 87, 93, 1);
+    border: 2px solid #2F4858;    
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    box-shadow: 3px 2px 1px 0px #978271;
 }
 
 
