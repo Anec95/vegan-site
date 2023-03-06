@@ -1,7 +1,7 @@
 import './App.css'
 import 'animate.css'
 import 'Assets/css/style.css'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Routes, Route, useNavigate } from "react-router-dom"
 import Layout from 'Pages/layout/Layout'
 import Homepage from './Pages/homepage/Homepage'
@@ -12,7 +12,7 @@ import MainCourse from 'Pages/MainCourse/MainCourse';
 import SideDish from 'Pages/SideDish/SideDish';
 import Dessert from 'Pages/Dessert/Dessert';
 import NotFound from 'Pages/NotFound/NotFound'
-import { searchMeal, searchRecipes } from 'API/dataRecipes';
+import { searchRecipes } from 'API/dataRecipes';
 import SearchResult from 'Pages/SearchResult/SearchResult';
 
 
